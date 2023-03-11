@@ -1,3 +1,4 @@
 class RoutesNavigator {
-  static const login = '/login';
+  static const homePage = '/home_page';
+  static const bridgePage = '/bridge_page';
 }
