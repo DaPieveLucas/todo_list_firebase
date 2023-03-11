@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../colors/app_colors.dart';
+import '../utils/colors/app_colors.dart';
 
 class PasswordAuthTextField extends StatelessWidget {
   const PasswordAuthTextField({

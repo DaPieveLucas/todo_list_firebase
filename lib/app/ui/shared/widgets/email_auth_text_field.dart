@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../colors/app_colors.dart';
+import '../utils/colors/app_colors.dart';
 
 class EmailAuthTextField extends StatelessWidget {
-  const EmailAuthTextField(
-      {required this.emailFormValidator,
-      required this.emailController,
-      super.key});
+  const EmailAuthTextField({
+    required this.emailFormValidator,
+    required this.emailController,
+    super.key,
+  });
 
   final TextEditingController emailController;
   final String? Function(String?)? emailFormValidator;
@@ -38,7 +39,7 @@ class EmailAuthTextField extends StatelessWidget {
         floatingLabelBehavior: FloatingLabelBehavior.never,
       ),
       autocorrect: false,
-      textInputAction: TextInputAction.done,
+      textInputAction: TextInputAction.next,
       validator: emailFormValidator,
     );
   }
