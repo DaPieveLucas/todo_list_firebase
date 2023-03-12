@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      scaffoldMessengerKey: Utils.instance.scaffoldKey,
+      scaffoldMessengerKey: SnackBarMessage.instance.scaffoldKey,
       debugShowCheckedModeBanner: false,
       title: 'Todo list with firebase',
       getPages: Routes.appPages,

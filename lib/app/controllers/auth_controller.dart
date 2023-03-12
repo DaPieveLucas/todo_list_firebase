@@ -37,6 +37,8 @@ class AuthController extends GetxController {
     return null;
   }
 
+  //TODO: fazer mais uma camada para consumo de dados externos
+
   //Executar método de login
   Future<void> signIn() async {
     if (!formKey.currentState!.validate()) {
@@ -52,7 +54,7 @@ class AuthController extends GetxController {
 
       cleanTextField();
     } on FirebaseAuthException catch (e) {
-      Utils.instance.showSnackBar(e.message);
+      SnackBarMessage.instance.showSnackBar(e.message);
     }
   }
 
@@ -71,7 +73,7 @@ class AuthController extends GetxController {
       cleanTextField();
     } on FirebaseAuthException catch (e) {
       log(e.toString());
-      Utils.instance.showSnackBar(e.message);
+      SnackBarMessage.instance.showSnackBar(e.message);
     }
   }
 

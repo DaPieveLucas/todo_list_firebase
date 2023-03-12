@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class Utils {
-  Utils._();
+class SnackBarMessage {
+  SnackBarMessage._();
 
-  static final instance = Utils._();
+  static final instance = SnackBarMessage._();
 
   final scaffoldKey = GlobalKey<ScaffoldMessengerState>();
 
