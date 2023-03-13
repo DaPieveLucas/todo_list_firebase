@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:todo_list_firebase/app/core/routes/app_routes.dart';
 import 'package:todo_list_firebase/app/core/routes/routes_navigator.dart';
-import 'package:todo_list_firebase/app/ui/shared/widgets/snack_bar_message.dart';
+import 'package:todo_list_firebase/app/ui/shared/widgets/login_page_widgets/snack_bar_message.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

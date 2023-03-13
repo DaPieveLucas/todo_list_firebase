@@ -5,7 +5,7 @@ import 'package:todo_list_firebase/app/controllers/auth_controller.dart';
 import 'package:todo_list_firebase/app/ui/shared/utils/images/app_images.dart';
 
 import '../shared/utils/colors/app_colors.dart';
-import '../shared/widgets/auth_form.dart';
+import '../shared/widgets/login_page_widgets/auth_form.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({
