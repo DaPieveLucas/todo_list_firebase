@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
             onPressed: () {
               homePageController.firebaseController.signOut();
             },
-            icon: const Icon(Icons.calendar_month_outlined),
+            icon: const Icon(Icons.logout_outlined),
           )
         ],
       ),
@@ -53,6 +53,8 @@ class HomePage extends StatelessWidget {
                       taskColor = AppColors.secondary;
                     } else if (taskTag == 'School') {
                       taskColor = AppColors.primaryBlue;
+                    } else if (taskTag == 'Important') {
+                      taskColor = Colors.red;
                     }
                     return Container(
                       height: 70,
@@ -60,8 +62,7 @@ class HomePage extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15.0),
                         color: AppColors.white,
-                        border:
-                            Border.all(width: 2, color: AppColors.primaryBlue),
+                        border: Border.all(width: 3, color: taskColor),
                         boxShadow: const [
                           BoxShadow(
                             blurRadius: 5.0,

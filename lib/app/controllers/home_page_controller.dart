@@ -12,7 +12,7 @@ class HomePageController extends GetxController {
 
   Rx<UserInteractions> interactions = Rx(UserInteractions.idle);
 
-  final List<String> taskTags = ['Work', 'School', 'Other'];
+  final List<String> taskTags = ['Work', 'School', 'Other', 'Important'];
   String? selectedValueFromList;
 
   String? changeSelectedValueFromDropdown(String? newValueFromDropdown) {
