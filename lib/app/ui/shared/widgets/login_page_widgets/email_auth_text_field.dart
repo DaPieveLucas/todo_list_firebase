@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-import '../utils/colors/app_colors.dart';
+import '../../utils/colors/app_colors.dart';
 
-class PasswordAuthTextField extends StatelessWidget {
-  const PasswordAuthTextField({
-    required this.passwordFormValidator,
-    required this.passwordController,
+class EmailAuthTextField extends StatelessWidget {
+  const EmailAuthTextField({
+    required this.emailFormValidator,
+    required this.emailController,
     super.key,
   });
 
-  final TextEditingController passwordController;
-  final String? Function(String?)? passwordFormValidator;
+  final TextEditingController emailController;
+  final String? Function(String?)? emailFormValidator;
 
   static OutlineInputBorder border = OutlineInputBorder(
     borderRadius: BorderRadius.circular(5.0),
@@ -25,13 +25,13 @@ class PasswordAuthTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      keyboardType: TextInputType.visiblePassword,
-      controller: passwordController,
+      keyboardType: TextInputType.emailAddress,
+      controller: emailController,
       decoration: InputDecoration(
         contentPadding: const EdgeInsets.all(15.0),
         filled: true,
         fillColor: AppColors.white,
-        hintText: 'Password',
+        hintText: 'Email',
         border: border,
         enabledBorder: border,
         errorBorder: errorBorder,
@@ -39,9 +39,8 @@ class PasswordAuthTextField extends StatelessWidget {
         floatingLabelBehavior: FloatingLabelBehavior.never,
       ),
       autocorrect: false,
-      textInputAction: TextInputAction.done,
-      validator: passwordFormValidator,
-      obscureText: true,
+      textInputAction: TextInputAction.next,
+      validator: emailFormValidator,
     );
   }
 }

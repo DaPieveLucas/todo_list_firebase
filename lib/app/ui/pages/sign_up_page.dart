@@ -4,7 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import '../../controllers/auth_controller.dart';
 import '../shared/utils/colors/app_colors.dart';
 import '../shared/utils/images/app_images.dart';
-import '../shared/widgets/auth_form.dart';
+import '../shared/widgets/login_page_widgets/auth_form.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({

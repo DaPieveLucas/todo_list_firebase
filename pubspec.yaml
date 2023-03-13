@@ -38,6 +38,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: ^2.0.2
+  fluttertoast: ^8.2.1
   get: ^4.6.5
 
 dev_dependencies:

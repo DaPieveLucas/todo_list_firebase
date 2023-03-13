@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:todo_list_firebase/app/ui/shared/widgets/snack_bar_message.dart';
+import 'package:todo_list_firebase/app/ui/shared/widgets/login_page_widgets/snack_bar_message.dart';
 
 class AuthController extends GetxController {
   final TextEditingController emaController = TextEditingController();
