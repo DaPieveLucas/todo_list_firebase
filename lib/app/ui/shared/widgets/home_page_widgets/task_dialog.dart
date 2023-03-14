@@ -3,15 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:todo_list_firebase/app/ui/shared/utils/colors/app_colors.dart';
 
 import '../../../../controllers/home_page_controller.dart';
+import '../../../../services/image_picker_service.dart';
 import 'dialog_form_field.dart';
 import 'dropdown_form_field.dart';
 import 'user_interactions_action_button.dart';
 
 class TaskDialog extends StatelessWidget {
-  const TaskDialog({
+  TaskDialog({
     required this.dialogController,
     required this.taskNameController,
     required this.taskDescController,
+    required this.dialogActionName,
     this.taskId,
     super.key,
   });
@@ -19,6 +21,8 @@ class TaskDialog extends StatelessWidget {
   final TextEditingController taskDescController;
   final TextEditingController taskNameController;
   final HomePageController dialogController;
+  final ImagePickerService pickerService = ImagePickerService();
+  final String dialogActionName;
   final String? taskId;
 
   @override
@@ -31,10 +35,10 @@ class TaskDialog extends StatelessWidget {
 
     return AlertDialog(
       scrollable: true,
-      title: const Text(
-        'New task',
+      title: Text(
+        dialogActionName,
         textAlign: TextAlign.center,
-        style: TextStyle(fontSize: 16, color: AppColors.black),
+        style: const TextStyle(fontSize: 16, color: AppColors.black),
       ),
       content: SizedBox(
         height: height * 0.35,
@@ -63,6 +67,15 @@ class TaskDialog extends StatelessWidget {
         ),
       ),
       actions: [
+        ElevatedButton(
+          onPressed: () {
+            pickerService.uploadImageToFirebaseStorage();
+          },
+          style: ElevatedButton.styleFrom(
+            backgroundColor: AppColors.primary,
+          ),
+          child: const Text('Upload Photo'),
+        ),
         ElevatedButton(
           onPressed: () {
             Navigator.of(context).pop();
