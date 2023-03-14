@@ -113,6 +113,7 @@ class HomePage extends StatelessWidget {
                                     () => showDialog(
                                       context: context,
                                       builder: (context) => TaskDialog(
+                                        dialogActionName: 'Edit Task',
                                         dialogController: homePageController,
                                         taskDescController: homePageController
                                             .taskDescController,
@@ -176,6 +177,7 @@ class HomePage extends StatelessWidget {
           showDialog(
             context: context,
             builder: (context) => TaskDialog(
+              dialogActionName: 'Create Task',
               dialogController: homePageController,
               taskDescController: homePageController.taskDescController,
               taskNameController: homePageController.taskNameController,
@@ -187,27 +189,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
-
-
-      // Center(
-      //   child: Column(
-      //     mainAxisAlignment: MainAxisAlignment.center,
-      //     children: [
-      //       Text(
-      //         user.email!,
-      //         style: const TextStyle(
-      //           fontSize: 20,
-      //           fontWeight: FontWeight.bold,
-      //         ),
-      //       ),
-      //       const SizedBox(
-      //         height: 10,
-      //       ),
-      //       ElevatedButton(
-      //         onPressed: () => firebaseController.signOut(),
-      //         child: const Text('Sign Out'),
-      //       )
-      //     ],
-      //   ),
-      // ),
